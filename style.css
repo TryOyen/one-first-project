@@ -118,20 +118,67 @@ nav ul li a {
     line-height: 200px;
 }
 
+/* Gaya umum untuk seluruh bagian kontak */
 #contact {
-    background-color: #ffbc4b;
-    padding: 15px;
-    border-radius: 0.5%;
+    padding: 50px 20px;
+    background-color: #f8ee66;
     text-align: center;
 }
 
-.td-btn {
-    padding: 12px 36px;
-    text-transform: uppercase;
-    transition: background-color 0.2s ease-in-out;
-    background-color: #0fbfbf;
-
+#contact h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
 }
+
+/* Gaya untuk formulir */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 192, 203, 0.705);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-top: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical; /* Hanya bisa di-resize secara vertikal */
+}
+
+/* Gaya untuk tombol kirim */
+form button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f9fafcb0;
+}
+
 
 footer {
     background-color: #f4f4f4;
