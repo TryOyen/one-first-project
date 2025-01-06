@@ -29,27 +29,40 @@
         </section>
         <section id="portfolio">
             <h2>~ My Project ~</h2>
-            <div class="project" id="project1"><a href="login.html">FORM LOGIN</a></div>
-            <div class="project" id="project2"><a href="kalkulator.html">Calculator</a></div>
-            <div class="project" id="project3"><a href="dashboard.html">Dashboard</a></div>
-            <div class="project" id="project4"><a href="tetris.html">Tetris</a></div>
-            <div class="project" id="project5"><a href="https://kelompok5.tplp4.com/">Online Store Vegetable</a></div>
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('frontend')">Website</button>
+                <button onclick="filterProjects('game')">Game</button>
+            </div>
+            <div class="project frontend" id="project1"><a href="login.html">FORM LOGIN</a></div>
+            <div class="project frontend" id="project2"><a href="kalkulator.html">Calculator</a></div>
+            <div class="project frontend" id="project3"><a href="dashboard.html">Dashboard</a></div>
+            <div class="project game" id="project4"><a href="tetris.html">Tetris</a></div>
+            <div class="project frontend" id="project5"><a href="https://kelompok5.tplp4.com/">Online Store Vegetable</a></div>
         </section>
+        
         <section id="achievement">
             <h2>~ My Achievement ~</h2>
-            <div class="certificate" id="certificate1">
+            <div class="filter-buttons">
+                <button onclick="filterCertificates('all')">All</button>
+                <button onclick="filterCertificates('html')">HTML</button>
+                <button onclick="filterCertificates('css')">CSS</button>
+                <button onclick="filterCertificates('javascript')">JavaScript</button>
+            </div>
+            <div class="certificate html" id="certificate1">
                 <a href="https://www.sololearn.com/certificates/CC-FORXPK67">Certificate HTML</a>
             </div>
-            <div class="certificate" id="certificate2">
+            <div class="certificate css" id="certificate2">
                 <a href="https://www.sololearn.com/certificates/CC-RMZBMJRN">Certificate CSS</a>
             </div>
-            <div class="certificate" id="certificate3">
+            <div class="certificate javascript" id="certificate3">
                 <a href="https://www.sololearn.com/certificates/CC-RD8F7ZVD">Certificate JavaScript</a>
             </div>
-            <div class="certificate" id="certificate4">
+            <div class="certificate javascript" id="certificate4">
                 <a href="https://www.sololearn.com/certificates/CC-2O8OP1VL">Certificate intermediate JavaScript</a>
             </div>
         </section>
+        
         <section id="contact">
             <h2>~ Keep in Touch ~</h2>
             <form action="mail to:putrasufyaan@gmail.com" method="POST" enctype="text/plain">
@@ -64,11 +77,48 @@
 
                 <button type="submit" class="btn btn-default td-btn outline white">Send Message</button>
             </form>
+            <div class="map-container">
+                <h3>Our Location</h3>
+                <p>Jl. Raya Puspitek, Buaran, Kec. Pamulang, Kota Tangerang Selatan, Banten 15310</p>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31722.693385708102!2d106.6893312!3d-6.3504384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1736138277132!5m2!1sid!2sid"
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
         </section>
     </main>
     <footer>
         <p>Copyright © 2024 Sufyaan Putra — All Rights Reserved</p>
     </footer>
+
+    <script>
+        function filterProjects(category) {
+            var projects = document.getElementsByClassName('project');
+            for (var i = 0; i < projects.length; i++) {
+                if (category === 'all' || projects[i].classList.contains(category)) {
+                    projects[i].style.display = 'inline-block';
+                } else {
+                    projects[i].style.display = 'none';
+                }
+            }
+        }
+
+        function filterCertificates(category) {
+            var certificates = document.getElementsByClassName('certificate');
+            for (var i = 0; i < certificates.length; i++) {
+                if (category === 'all' || certificates[i].classList.contains(category)) {
+                    certificates[i].style.display = 'inline-block';
+                } else {
+                    certificates[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
